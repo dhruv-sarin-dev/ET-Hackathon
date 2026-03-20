@@ -1,0 +1,20 @@
+# Security & API Keys
+.env
+*.key
+
+# AI Meta-State & Orchestration (KEEP HIDDEN)
+build_state.json
+state_updater.py
+.agent/
+agent.yaml
+.agent_rules/
+
+# Python Environments & Cache
+__pycache__/
+*.pyc
+venv/
+env/
+.pytest_cache/
+
+# Generated Artifacts (Users should run code to generate)
+nexus_dashboard.html

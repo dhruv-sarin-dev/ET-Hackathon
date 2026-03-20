@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-03-20T11:03:00.919119",
+  "active_disruptions": [
+    {
+      "event_id": "evt_99e6dad6",
+      "impacted_node_id": "DC1",
+      "severity": "High",
+      "description": "Mocked extraction: Port strike at Distributor North"
+    }
+  ],
+  "failed_nodes_cascade": [
+    "R1",
+    "DC1"
+  ],
+  "active_reroutes": [
+    {
+      "original_path": [],
+      "new_path": [
+        "S2",
+        "M2",
+        "DC2",
+        "R2"
+      ],
+      "estimated_delay_hours": 46
+    },
+    {
+      "original_path": [],
+      "new_path": [
+        "S2",
+        "M2",
+        "DC2",
+        "R3"
+      ],
+      "estimated_delay_hours": 42
+    }
+  ]
+}
