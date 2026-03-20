@@ -1,16 +1,41 @@
 {
-  "timestamp": "2026-03-20T11:03:00.919119",
+  "timestamp": "2026-03-20T12:42:00.503060",
   "active_disruptions": [
     {
       "event_id": "evt_99e6dad6",
       "impacted_node_id": "DC1",
       "severity": "High",
       "description": "Mocked extraction: Port strike at Distributor North"
+    },
+    {
+      "event_id": "E1",
+      "impacted_node_id": "DC1",
+      "severity": "High",
+      "description": "Port strike"
+    },
+    {
+      "event_id": "E2",
+      "impacted_node_id": "M1",
+      "severity": "High",
+      "description": "Power grid failure"
+    },
+    {
+      "event_id": "E1",
+      "impacted_node_id": "DC1",
+      "severity": "High",
+      "description": "Port strike"
+    },
+    {
+      "event_id": "E2",
+      "impacted_node_id": "M1",
+      "severity": "High",
+      "description": "Power grid failure"
     }
   ],
   "failed_nodes_cascade": [
-    "R1",
-    "DC1"
+    "M1",
+    "DC1",
+    "R1"
   ],
   "active_reroutes": [
     {
