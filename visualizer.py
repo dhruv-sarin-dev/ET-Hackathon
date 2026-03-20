@@ -80,30 +80,35 @@ def draw_network():
         mode='markers+text',
         hoverinfo='text',
         text=node_text,
+        textposition='top center',
+        textfont={"color": 'white', "size": 14},
         marker={
             "showscale": False,
             "color": node_color,
-            "size": 12,
-            "line_width": 2
+            "size": 24,
+            "line_width": 2,
+            "line_color": 'white'
         })
             
     fig = go.Figure(data=edge_traces + [node_trace],
              layout=go.Layout(
                 title='NexusGraph Supply Chain Dashboard (Phase 8)',
                 showlegend=False,
-                margin=dict(b=0,l=0,r=0,t=40),
-                scene=dict(
-                    xaxis=dict(showgrid=True, gridcolor='rgba(255,255,255,0.2)', title='Tier Stage', range=[-5, 35]),
-                    yaxis=dict(showgrid=True, gridcolor='rgba(255,255,255,0.2)', title='', range=[-15, 15]),
-                    zaxis=dict(showgrid=True, gridcolor='rgba(255,255,255,0.2)', title='', range=[-10, 10]),
-                    bgcolor='rgba(10, 10, 20, 1)'
-                ),
+                margin={"b": 0, "l": 0, "r": 0, "t": 40},
+                scene={
+                    "aspectmode": 'data',
+                    "camera": {"eye": {"x": 1.6, "y": -1.6, "z": 0.6}},
+                    "xaxis": {"showgrid": True, "gridcolor": 'rgba(255,255,255,0.2)', "title": 'Tier Stage'},
+                    "yaxis": {"showgrid": True, "gridcolor": 'rgba(255,255,255,0.2)', "title": ''},
+                    "zaxis": {"showgrid": True, "gridcolor": 'rgba(255,255,255,0.2)', "title": ''},
+                    "bgcolor": 'rgba(10, 10, 20, 1)'
+                },
                 paper_bgcolor='rgba(10, 10, 20, 1)',
-                font=dict(color='white')
+                font={"color": 'white'}
              ))
     file_name = "nexus_dashboard.html"
     fig.write_html(file_name)
-    logger.info(f"Generated Phase 8 Dashboard at {file_name}")
+    logger.info(f"Generated Enhanced Phase 8 Dashboard at {file_name}")
 
 if __name__ == "__main__":
     draw_network()
