@@ -9,7 +9,7 @@
 **The Solution:** NexusGraph monitors unstructured intelligence streams, autonomously translates disruptions into a mathematically rigid Graph state, and performs millisecond-scale 3-tier supply chain rerouting to avoid dead nodes—all without human intervention.
 
 ## Tech Stack
-- **Google Gemini 1.5 Flash:** High-speed unstructured-to-structured disruption parsing.
+- **Google Gemini 2.5 Flash:** High-speed unstructured-to-structured disruption parsing.
 - **LangChain:** Agent orchestration and validation.
 - **NetworkX:** Precise graph math, shortest-path calculation, and cascade simulation.
 - **Plotly:** 3D interactive structural visualization.

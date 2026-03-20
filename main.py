@@ -27,7 +27,7 @@ def run_signal_agent(news_text: str):
         ))
     else:
         try:
-            llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+            llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
             structured_llm = llm.with_structured_output(DisruptionReport)
             
             prompt = ChatPromptTemplate.from_messages([
