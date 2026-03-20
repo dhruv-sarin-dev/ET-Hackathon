@@ -90,6 +90,14 @@ def draw_network():
             "line_color": 'white'
         })
             
+    axis_style = {
+        "showgrid": True,
+        "gridcolor": 'rgba(255,255,255,0.15)',
+        "zeroline": False,
+        "showbackground": False,
+        "showspikes": False
+    }
+
     fig = go.Figure(data=edge_traces + [node_trace],
              layout=go.Layout(
                 title='NexusGraph Supply Chain Dashboard (Phase 8)',
@@ -98,12 +106,13 @@ def draw_network():
                 scene={
                     "aspectmode": 'data',
                     "camera": {"eye": {"x": 1.6, "y": -1.6, "z": 0.6}},
-                    "xaxis": {"showgrid": True, "gridcolor": 'rgba(255,255,255,0.2)', "title": 'Tier Stage'},
-                    "yaxis": {"showgrid": True, "gridcolor": 'rgba(255,255,255,0.2)', "title": ''},
-                    "zaxis": {"showgrid": True, "gridcolor": 'rgba(255,255,255,0.2)', "title": ''},
+                    "xaxis": {**axis_style, "title": 'Tier Stage'},
+                    "yaxis": {**axis_style, "title": ''},
+                    "zaxis": {**axis_style, "title": ''},
                     "bgcolor": 'rgba(10, 10, 20, 1)'
                 },
                 paper_bgcolor='rgba(10, 10, 20, 1)',
+                plot_bgcolor='rgba(10, 10, 20, 1)',
                 font={"color": 'white'}
              ))
     file_name = "nexus_dashboard.html"
