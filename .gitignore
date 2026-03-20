@@ -3,6 +3,7 @@
 *.key
 
 # AI Meta-State & Orchestration (KEEP HIDDEN)
+instructions.md
 build_state.json
 state_updater.py
 .agent/
