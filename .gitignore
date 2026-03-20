@@ -16,6 +16,7 @@ __pycache__/
 venv/
 env/
 .pytest_cache/
+*.log
 
 # Generated Artifacts (Users should run code to generate)
 nexus_dashboard.html
